@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+
+<!-- Add image field -->
+<record model="ir.ui.view" id="res_lang_flag_form">
+		    <field name="name">res.lang.flag.form</field>
+            <field name="model">res.lang</field>
+            <field name="inherit_id" ref="base.res_lang_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="before">
+                    <field name="flag_image" widget='image' ></field>
+                </xpath>
+            </field>
+</record>
+
+
+
+</data>
+</openerp>
