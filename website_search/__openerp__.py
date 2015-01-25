@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
-#    
-#    OpenERP, Open Source Enterprise Management Solution
-#    risk_management Module
-#    Copyright (C) 2014 OpenSur (comercial@opensur.com)
+#
+#    OpenSur
+#    Copyright (C) 2014-Today OpenSur SA (<http://www.opensur.com>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -16,33 +15,31 @@
 #    GNU Affero General Public License for more details.
 #
 #    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.     
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-{
-    'name': 'Restrict access to Manage Databases',
-    'version': '1.0',
-    'author': 'OpenSur SA',
-    'website': 'http://www.opensur.com',
-    'category': 'Website',
-    'description': """
-       Restrict access to Manage Databases feature, only administrator user or technical features group allowed\n
-       You can customize error page by editing file: restrict_access.html
 
-    """,
-    'depends': ['web', 'base'],
-    'update_xml':[
+{
+    'name': 'Website Search',
+    'category': 'Website',
+    'summary': 'Website search',
+    'version': '1.0',
+    'description': """
+Search website content: including pages, blogs posts, blog post comments, customers, job opportunities and products
+        """,
+    'author': 'OpenSur SA',
+    'website': 'https://www.opensur.com',
+    'depends': [
+        'website'
     ],
-    'data': [],
-    'demo': [],
-    'test': [],
-    'qweb' : [
-                "views/base.xml",
-                "views/restrict_access.xml"
+    'data': [
+        'views/website_search.xml'
+    ],
+    'qweb': [
+        'static/src/xml/*.xml'
+    ],
+    'demo': [
     ],
     'installable': True,
     'application': True,
-    'auto_install': True,
-    'active': False,
 }
-
