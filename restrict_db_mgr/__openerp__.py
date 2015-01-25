@@ -21,13 +21,13 @@
 ##############################################################################
 {
     'name': 'Restrict access to Manage Databases',
-    'version': ‘1.1’,
-    'author': 'OpenSur SA’,
+    'version': '1.0',
+    'author': 'OpenSur SA',
     'website': 'http://www.opensur.com',
-    'category': 'Website’,
+    'category': 'Website',
     'description': """
        Restrict access to Manage Databases feature, only administrator user or technical features group allowed\n
-       You can customize error page by editing file: restrict_access.html 
+       You can customize error page by editing file: restrict_access.html
 
     """,
     'depends': ['web', 'base'],
