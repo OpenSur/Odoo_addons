@@ -1,0 +1,13 @@
+<templates>
+    <!-- Templates modified at the web start, before loading of a database. -->
+
+    <!-- Remove the Manage database link, but keep the Powered by OpenERP-->
+    <t t-extend="Login">
+        <t t-jquery="div.oe_login_manage_db" t-operation="replace">
+            <div class="oe_single_form_footer">
+                <a href="http://www.openerp.com" target="_blank">Powered by <span>OpenERP</span></a>
+            </div>
+        </t>
+    </t>
+
+</templates>
