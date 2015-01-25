@@ -21,7 +21,7 @@
 ##############################################################################
 {
     'name': 'Restrict access to Manage Databases',
-    'version': '1.0',
+    'version': ‘1.1’,
     'author': 'OpenSur SA’,
     'website': 'http://www.opensur.com',
     'category': 'Website’,
