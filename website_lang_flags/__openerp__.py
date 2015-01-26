@@ -30,6 +30,7 @@
         """,
     'author': 'OpenSur SA',
     'website': 'https://www.opensur.com',
+    'images': ['images/menu_bar.png'],
     'depends': [
         'website'
     ],
