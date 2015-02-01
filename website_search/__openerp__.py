@@ -20,25 +20,24 @@
 ##############################################################################
 
 {
-    'name': 'Website Language Flags',
+    'name': 'Website Search',
     'category': 'Website',
-    'summary': 'Website language flags',
+    'summary': 'Website search',
     'version': '1.0',
     'description': """
-    Adds language flags to top menu bar.
-    You can define language flags in settings/languages
+Search website content: including pages, blogs posts, blog post comments, customers, job opportunities and products
         """,
     'author': 'OpenSur SA',
     'website': 'https://www.opensur.com',
-    'images': ['images/menu_bar.png'],
+    'images': ['static/description/results.png', 'static/description/advanced.png', 'static/description/options.png', 'static/description/search_field.png', 'static/description/search_icon.png'],
     'depends': [
         'website'
     ],
     'data': [
-        'views/website_lang_flags.xml',
-        'views/res_flag.xml'
+        'views/website_search.xml'
     ],
     'qweb': [
+        'static/src/xml/*.xml'
     ],
     'demo': [
     ],
