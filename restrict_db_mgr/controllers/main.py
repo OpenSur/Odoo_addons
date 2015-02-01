@@ -81,7 +81,7 @@ class Database_restrict(Database):
             return  env.get_template("restrict_access.html").render({'debug': request.debug})
 
 
-    @http.route('/web/database/create', type='http', auth="none")
+    @http.route('/web/database/create', type='json', auth="none")
     def create(self, req, fields):
 
         # Check if admin group
@@ -92,7 +92,7 @@ class Database_restrict(Database):
         else:
             return  env.get_template("restrict_access.html").render({'debug': request.debug})
 
-    @http.route('/web/database/duplicate', type='http', auth="none")
+    @http.route('/web/database/duplicate', type='json', auth="none")
     def duplicate(self, req, fields):
 
         # Check if admin group
@@ -103,7 +103,7 @@ class Database_restrict(Database):
         else:
             return  env.get_template("restrict_access.html").render({'debug': request.debug})
 
-    @http.route('/web/database/drop', type='http', auth="none")
+    @http.route('/web/database/drop', type='json', auth="none")
     def drop(self, req, fields):
 
         # Check if admin group
