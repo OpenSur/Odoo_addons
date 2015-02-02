@@ -203,7 +203,7 @@ class WebsiteSearch(http.Controller):
         website_sale_installed = self._module_installed(cr, 'website_sale')
 
         # Define search scope
-        search_on_pages=self._search_on_pages
+        search_on_pages=self._search_on_pages or not (search_on_blogposts or search_on_comments or search_on_customers or search_on_jobs or search_on_products)
         search_on_blogposts=self._search_on_blogposts and website_blog_installed
         search_on_comments=self._search_on_comments and website_blog_installed
         search_on_customers=self._search_on_customers and website_partner_installed
