@@ -19,12 +19,13 @@
 #
 ##############################################################################
 
-
+import openerp
 from openerp.osv import osv, fields
 
 class website(osv.osv):
     _inherit="website"
 
+    @openerp.tools.ormcache(skiparg=3)
     def _get_languages(self, cr, uid, id, context=None):
         website = self.browse(cr, uid, id)
         return [(lg.code, lg.name, lg) for lg in website.language_ids]
