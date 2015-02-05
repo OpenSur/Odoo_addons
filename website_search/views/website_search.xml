@@ -214,6 +214,7 @@
                     <div t-if="result['type']=='Product'" class="subtitle" >
                         <a class="pull-left" t-attf-href="#{result['url']}"><img src="/website_search/static/src/img/product.png" height="50" width="50" t-attf-title="#{result['name']}" /> </a>
                     </div>
+            </div>
         </div>
         <div class="col-md-2 col-md-push-1 text-left text-muted">
                 <a t-attf-href="#{result['url']}"><span><t t-esc="result['name']"/></span></a>
