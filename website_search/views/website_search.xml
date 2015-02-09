@@ -41,14 +41,14 @@
 <template id="top_menu_search_field" inherit_id="website.layout" customize_show="True" name="Search field on menu">
     <xpath expr="//ul[@id='top_menu']" position="after">
         <form class="navbar-form navbar-right" t-attf-action="/search_results" method="get" >
-            <div class="input-group" style="width: 12em;" t-att-data-editable=''>
-                <input type="search" t-att-value="search or ''" name="search" class="form-control input-sm" placeholder="Search" t-att-data-editable=''/>
-                <span class="input-group-btn" t-att-data-editable=''>
-                    <button class="btn btn-default btn-xs" t-att-data-editable=''
+            <div class="input-group" style="width: 12em;" >
+                <input type="search" t-att-value="search or ''" name="search" class="form-control input-sm" placeholder="Search" />
+                <span class="input-group-btn" >
+                    <button class="btn btn-default btn-xs"
                         t-attf-href="/search_results?{{keep_query('sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'search_on_products', 'case_sensitive', search=search, search_advanced='0')}}" >
                             <span class="fa fa-search"></span>
                     </button>
-                    <a class="btn btn-default btn-xs" contenteditable="false" t-attf-href="/search_advanced"><span class="fa fa-wrench"></span></a>
+                    <a class="btn btn-default btn-xs"  t-attf-href="/search_advanced"><span class="fa fa-wrench"></span></a>
                 </span>
             </div>
         </form>
