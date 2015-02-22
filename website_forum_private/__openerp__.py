@@ -30,7 +30,7 @@ OpenERP Forum Private
 =====================
 Add feature to have private forums, visible only for certain security groups
         """,
-    'author': 'OpenSur',
+    'author': 'OpenSur SA’,
     'depends': ['website_forum'],
     'data': [
         'data/access_rules.xml',
