@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_forum_forum_private_form">
+            <field name="name">forum.forum.private.form</field>
+            <field name="model">forum.forum</field>
+            <field name="inherit_id" ref="website_forum.view_forum_forum_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="security_type"/>
+                    <field name="group_ids" widget="many2many_tags" attrs="{'invisible': [('security_type','=','public')]}"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>
