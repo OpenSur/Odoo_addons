@@ -24,7 +24,7 @@
     'category': 'Website',
     'website': 'https://www.opensur.com',
     'summary': 'Blogs private access',
-    'version': '1.0',
+    'version': '1.01’,
     'description': """
 OpenERP Blog Private
 ====================
