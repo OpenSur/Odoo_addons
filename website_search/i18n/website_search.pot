@@ -1,0 +1,222 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-19 17:49+0000\n"
+"PO-Revision-Date: 2015-02-23 17:13+0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: website_search
+#: view:website:website_search.search_results
+msgid ", showing"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_form
+msgid "Advanced search"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Blogs"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_form
+#: view:website:website_search.search_form_advanced
+msgid "Buscar"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Buscar en:"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Case sens"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Case sensitive search (active)"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Case sensitive search (inactive)"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Clients"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Comments"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Jobs"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_results
+msgid "No results found"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Page"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Pages"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Products"
+msgstr ""
+
+#. module: website_search
+#: view:website:website.layout
+msgid "Search"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Search on Jobs (active)"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Search on Jobs (inactive)"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Search on blog posts (active)"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Search on blog posts (inactive)"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Search on blog posts comments (active)"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Search on blog posts comments (inactive)"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Search on clients (active)"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Search on clients (inactive)"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Search on pages (active)"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Search on pages (inactive)"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Search on products (active)"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_options
+msgid "Search on products (inactive)"
+msgstr ""
+
+#. module: website_search
+#: view:website:website.layout
+msgid "Search page"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.error_search_len
+msgid "Search word must be at least 3 characters long..."
+msgstr ""
+
+#. module: website_search
+#: view:website:website.layout view:website:website_search.search_form
+#: view:website:website_search.search_form_advanced
+msgid "Search word..."
+msgstr ""
+
+#. module: website_search
+#: code:addons/website_search/controllers/main.py:480
+#, python-format
+msgid "Unable to get blog post comment text"
+msgstr ""
+
+#. module: website_search
+#: code:addons/website_search/controllers/main.py:465
+#, python-format
+msgid "Unable to get blog post text"
+msgstr ""
+
+#. module: website_search
+#: code:addons/website_search/controllers/main.py:496
+#, python-format
+msgid "Unable to get customer text"
+msgstr ""
+
+#. module: website_search
+#: code:addons/website_search/controllers/main.py:512
+#, python-format
+msgid "Unable to get job text"
+msgstr ""
+
+#. module: website_search
+#: code:addons/website_search/controllers/main.py:529
+#, python-format
+msgid "Unable to get product text"
+msgstr ""
+
+#. module: website_search
+#: code:addons/website_search/controllers/main.py:449
+#, python-format
+msgid "Unable to get text page"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_results
+msgid "result found"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_results
+msgid "results found"
+msgstr ""
+
+#. module: website_search
+#: view:website:website_search.search_results
+msgid "to"
+msgstr ""
