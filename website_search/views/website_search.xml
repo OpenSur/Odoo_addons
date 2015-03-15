@@ -28,27 +28,27 @@
 </template>
 
 <!-- Top Menu Add search option -->
-<template id="top_menu_search_button" inherit_id="website.layout" active="False"  customize_show="True" name="Search button on menu">
+<template id="top_menu_search_button" inherit_id="website.layout" customize_show="True" name="Search button on menu">
     <xpath expr="//ul[@id='top_menu']" position="inside">
         <li class="dropdown">
-                <a t-attf-href="/search" title="Search page">
+                <a t-attf-href="/search" title="Página de búsqueda">
                 <span class="fa fa-search"/>
             </a>
         </li>
     </xpath>
 </template>
 
-<template id="top_menu_search_field" inherit_id="website.layout" active="False" customize_show="True" name="Search field on menu">
+<template id="top_menu_search_field" inherit_id="website.layout" customize_show="True" name="Search field on menu">
     <xpath expr="//ul[@id='top_menu']" position="after">
         <form class="navbar-form navbar-right" t-attf-action="/search_results" method="get" >
-            <div class="input-group" style="width: 12em;" >
-                <input type="search" t-att-value="search or ''" name="search" class="form-control input-sm" placeholder="Search" />
-                <span class="input-group-btn" >
+            <div class="input-group" style="width: 12em;">
+                <input type="search" t-att-value="search or ''" name="search" class="form-control input-sm" placeholder="Search"/>
+                <span class="input-group-btn">
                     <button class="btn btn-default btn-xs"
                         t-attf-href="/search_results?{{keep_query('sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'search_on_products', 'case_sensitive', search=search, search_advanced='0')}}" >
                             <span class="fa fa-search"></span>
                     </button>
-                    <a class="btn btn-default btn-xs"  t-attf-href="/search_advanced"><span class="fa fa-wrench"></span></a>
+                    <a class="btn btn-default btn-xs" t-attf-href="/search_advanced"><span class="fa fa-wrench"></span></a>
                 </span>
             </div>
         </form>
@@ -56,16 +56,17 @@
     </xpath>
 </template>
 
-<template id="top_menu_search_dropdown" inherit_id="website.layout" active="True" customize_show="True" name="Search field dropdown">
+<template id="top_menu_search_dropdown" inherit_id="website.layout" customize_show="True" name="Search field dropdown">
     <xpath expr="//ul[@id='top_menu']" position="inside">
           <li class="dropdown">
             <a t-attf-href="/search_results?{{keep_query('sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'search_on_products', 'case_sensitive', search=search, search_advanced='0')}}" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-search"></span></a>
-            <ul class="dropdown-menu" style="padding:10px;width:16em;">
+            <ul class="dropdown-menu" style="padding:12px;">
                 <form class="form-inline" t-attf-action="/search_results" method="get">
-                    <div class="input-group" contenteditable="false">
+                    <div class="input-group">
                         <input type="search" t-att-value="search or ''" name="search" class="form-control pull-left input-sm" placeholder="Search word..."/>
                         <span class="input-group-btn">
-                        <button class="btn btn-default btn-xs" t-attf-href="/search_results?{{keep_query('sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'search_on_products', 'case_sensitive', search=search, search_advanced='0')}}">                                <span class="fa fa-search"></span>
+                            <button type="button" t-attf-href="/search_results?{{keep_query('sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'search_on_products', 'case_sensitive', search=search, search_advanced='0')}}" class="btn btn-default btn-xs">
+                                <span class="fa fa-search"></span>
                             </button>
                             <a class="btn btn-default btn-xs" t-attf-href="/search_advanced"><span class="fa fa-wrench"></span></a>
                         </span>
@@ -81,10 +82,10 @@
                 <form class="navbar-form col-md-offset-1" id="search_form" role="search" t-attf-action="/search_results" method="get">
                         <div class="form-group col-md-8">
                             <input type="search" class="form-control"
-                                name="search" placeholder="Search word..."
+                                name="search" placeholder="Palabra a buscar..."
                                 t-att-value="search or ''"/>
                             <button t-attf-href="/search_results?{{keep_query('sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'search_on_products', 'case_sensitive', search=search, search_advanced='0')}}" class="btn btn-default">Buscar</button>
-                            <a class="col-md-offset-1" t-attf-href="/search_advanced">Advanced search</a>
+                            <a class="col-md-offset-1" t-attf-href="/search_advanced">Búsqueda avanzada</a>
                         </div>
                         <div class="form-group col-md-8">
                         </div>
@@ -97,7 +98,7 @@
                 <form class="navbar-form " id="search_form" role="search" t-attf-action="/search_results" method="get">
                         <div class="form-group col-md-4" >
                             <input type="search" class="form-control"
-                                name="search" placeholder="Search word..."
+                                name="search" placeholder="Palabra a buscar..."
                                 t-att-value="search or ''"/>
                             <button t-attf-href="/search_results?{{keep_query('sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'search_on_products', 'case_sensitive', search=search, search_advanced='1')}}" class="btn btn-default">Buscar</button>
                         </div>
@@ -113,32 +114,32 @@
                                 <li ><h5>Buscar en: </h5></li>
                                 <li ><span><br/></span></li>
                                 <li >
-                                    <a t-if="search_on_pages" class="btn btn-primary btn-xs" t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id',  'sorting', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'search_on_products', 'case_sensitive', search_on_pages='0')}}" title="Search on pages (active)">Page</a>
-                                    <a t-if="not search_on_pages"  class="btn btn-default btn-xs"  t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'search_on_products', 'case_sensitive', search_on_pages='1')}}" title="Search on pages (inactive)">Pages</a>
+                                    <a t-if="search_on_pages" class="btn btn-primary btn-xs" t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id',  'sorting', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'search_on_products', 'case_sensitive', search_on_pages='0')}}" title="Buscar en páginas (activo)">Págs</a>
+                                    <a t-if="not search_on_pages"  class="btn btn-default btn-xs"  t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'search_on_products', 'case_sensitive', search_on_pages='1')}}" title="Buscar en páginas (inactivo)">Págs</a>
                                 </li>
                                 <li >
-                                    <a t-if="search_on_blogposts" class="btn btn-primary btn-xs"  t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting', 'search_on_pages', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'search_on_products', 'case_sensitive', search_on_blogposts='0')}}" title="Search on blog posts (active)"><span class="text-center">Blogs</span></a>
-                                    <a t-if="not search_on_blogposts" class="btn btn-default btn-xs" t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting', 'search_on_pages', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'search_on_products', 'case_sensitive', search_on_blogposts='1')}}" title="Search on blog posts (inactive)"><span class="text-center">Blogs</span></a>
+                                    <a t-if="search_on_blogposts" class="btn btn-primary btn-xs"  t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting', 'search_on_pages', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'search_on_products', 'case_sensitive', search_on_blogposts='0')}}" title="Buscar en publicaciones (activo)"><span class="text-center">Blogs</span></a>
+                                    <a t-if="not search_on_blogposts" class="btn btn-default btn-xs" t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting', 'search_on_pages', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'search_on_products', 'case_sensitive', search_on_blogposts='1')}}" title="Buscar en publicaciones (inactivo)"><span class="text-center">Blogs</span></a>
                                 </li>
                                 <li >
-                                    <a t-if="search_on_comments" class="btn btn-primary btn-xs" t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_customers', 'search_on_jobs', 'search_on_products', 'case_sensitive', search_on_comments='0')}}" title="Search on blog posts comments (active)"><span class="text-center">Comments</span></a>
-                                    <a t-if="not search_on_comments" class="btn btn-default btn-xs"  t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_customers', 'search_on_jobs', 'search_on_products', 'case_sensitive', search_on_comments='1')}}" title="Search on blog posts comments (inactive)"><span class="text-center">Comments</span></a>
+                                    <a t-if="search_on_comments" class="btn btn-primary btn-xs" t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_customers', 'search_on_jobs', 'search_on_products', 'case_sensitive', search_on_comments='0')}}" title="Buscar en comentarios (activo)"><span class="text-center">Coments</span></a>
+                                    <a t-if="not search_on_comments" class="btn btn-default btn-xs"  t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_customers', 'search_on_jobs', 'search_on_products', 'case_sensitive', search_on_comments='1')}}" title="Buscar en publicaciones (inactivo)"><span class="text-center">Coments</span></a>
                                 </li>
                                 <li >
-                                    <a t-if="search_on_customers" class="btn btn-primary btn-xs" t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_jobs', 'search_on_products', 'case_sensitive',search_on_customers='0')}}" title="Search on clients (active)"><span class="text-center">Clients</span></a>
-                                    <a t-if="not search_on_customers" class="btn btn-default btn-xs"  t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_jobs', 'search_on_products', 'case_sensitive',search_on_customers='1')}}" title="Search on clients (inactive)"><span class="text-center">Clients</span></a>
+                                    <a t-if="search_on_customers" class="btn btn-primary btn-xs" t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_jobs', 'search_on_products', 'case_sensitive',search_on_customers='0')}}" title="Buscar en clientes (activo)"><span class="text-center">Clientes</span></a>
+                                    <a t-if="not search_on_customers" class="btn btn-default btn-xs"  t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_jobs', 'search_on_products', 'case_sensitive',search_on_customers='1')}}" title="Buscar en clientes (inactivo)"><span class="text-center">Clientes</span></a>
                                 </li>
                                 <li >
-                                    <a t-if="search_on_jobs" class="btn btn-primary btn-xs" t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_products', 'case_sensitive',search_on_jobs='0')}}" title="Search on Jobs (active)"><span class="text-center">Jobs</span></a>
-                                    <a t-if="not search_on_jobs" class="btn btn-default btn-xs"  t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_products', 'case_sensitive',search_on_jobs='1')}}" title="Search on Jobs (inactive)"><span class="text-center">Jobs</span></a>
+                                    <a t-if="search_on_jobs" class="btn btn-primary btn-xs" t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_products', 'case_sensitive',search_on_jobs='0')}}" title="Buscar en oportunidades laborales (activo)"><span class="text-center">Trabajo</span></a>
+                                    <a t-if="not search_on_jobs" class="btn btn-default btn-xs"  t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_products', 'case_sensitive',search_on_jobs='1')}}" title="Buscar en oportunidades laborales (inactivo)"><span class="text-center">Trabajo</span></a>
                                 </li>
                                 <li >
-                                    <a t-if="search_on_products" class="btn btn-primary btn-xs" t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting',  'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'case_sensitive',search_on_products='0')}}" title="Search on products (active)"><span class="text-center">Products</span></a>
-                                    <a t-if="not search_on_products" class="btn btn-default btn-xs"  t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting',  'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'case_sensitive',search_on_products='1')}}" title="Search on products (inactive)"><span class="text-center">Products</span></a>
+                                    <a t-if="search_on_products" class="btn btn-primary btn-xs" t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting',  'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'case_sensitive',search_on_products='0')}}" title="Buscar en productos (activo)"><span class="text-center">Productos</span></a>
+                                    <a t-if="not search_on_products" class="btn btn-default btn-xs"  t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting',  'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'case_sensitive',search_on_products='1')}}" title="Buscar en productos (inactivo)"><span class="text-center">Productos</span></a>
                                 </li>
                                 <li >
-                                    <a t-if="case_sensitive" class="btn btn-primary btn-xs" t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'search_on_products',case_sensitive='0')}}" title="Case sensitive search (active)"><span class="text-center">Case sens</span></a>
-                                    <a t-if="not case_sensitive" class="btn btn-default btn-xs"  t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'search_on_products',case_sensitive='1')}}" title="Case sensitive search (inactive)"><span class="text-center">Case sens</span></a>
+                                    <a t-if="case_sensitive" class="btn btn-primary btn-xs" t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'search_on_products',case_sensitive='0')}}" title="Considerar mayúsculas/minúsculas al buscar (activo)"><span class="text-center">May/Min</span></a>
+                                    <a t-if="not case_sensitive" class="btn btn-default btn-xs"  t-attf-href="/search_advanced?{{keep_query('search', 'tag_id', 'vertical_id', 'horizontal_id', 'solucion_id', 'country_id', 'sorting', 'search_on_pages', 'search_on_blogposts', 'search_on_comments', 'search_on_customers', 'search_on_jobs', 'search_on_products',case_sensitive='1')}}" title="Considerar mayúsculas/minúsculas al buscar (inactivo)"><span class="text-center">May/Min</span></a>
                                 </li>
                             </ul>
 
@@ -194,6 +195,8 @@
     <div class="question row">
         <div class="col-md-1 text-left text-muted">
             <div t-attf-class="box text-muted">
+<!--                <div t-if="ocurrences&gt;1" class="subtitle"><p><t t-esc="result['ocurrences']"/></p> ocurrences</div>
+                <div t-if="ocurrences&lt;=1" class="subtitle"><p><t t-esc="result['ocurrences']"/></p> ocurrence</div>-->
                     <div t-if="result['type']=='Customer'">
                         <a class="pull-left" style="{'width': 50px; 'heigth': 50px;}" t-attf-href="#{result['url']}"
                         t-field="result['object'].image_small" t-field-options='{"widget": "image", "class": "media-object"}'/>
@@ -213,6 +216,14 @@
                     <div t-if="result['type']=='Product'" class="subtitle" >
                         <a class="pull-left" t-attf-href="#{result['url']}"><img src="/website_search/static/src/img/product.png" height="50" width="50" t-attf-title="#{result['name']}" /> </a>
                     </div>
+<!--                    <div t-if="result['type']=='Product'" class="subtitle">
+                        <a t-if="result['object'].image_small" class="pull-left" t-attf-href="result['url']"
+                            t-field="result['object'].image_small" t-field-options='{"widget": "image", "class": "media-object"}'/>
+                        <a t-if="!result['object'].image_small" class="pull-left" t-attf-href="result['url']"><img src="/website_search/static/src/img/product.png" height="50" width="50"/></a>
+                    </div>-->
+
+
+<!--                <div class="col-md-2 col-md-offset-1 text-muted text-left hidden-xs"><p><t t-esc="result['type_txt']"/></p></div>-->
             </div>
         </div>
         <div class="col-md-2 col-md-push-1 text-left text-muted">
@@ -243,7 +254,7 @@
                     <div class="form-group col-md-8"/>
                     <div class="form-group col-md-8">
                         <div class="col-md-8">
-                            <span >Search word must be at least 3 characters long...</span>
+                            <span >La palabra a buscar debe tener como mínimo 3 caracteres...</span>
                         </div>
                     </div>
                 </div>
@@ -269,10 +280,10 @@
                 <div class="form-group col-md-8"/>
                 <div class="form-group col-md-8">
                     <div class="col-md-8">
-                        <t t-if="results_count==0"><span>No results found</span></t>
-                        <t t-if="results_count==1"><t t-esc="results_count"/><span> result found</span></t>
-                        <t t-if="results_count&gt;1"><t t-esc="results_count"/><span> results found</span></t>
-                        <t t-if="results_count&gt;0"><span>, showing </span><span>( <t t-esc="pager['offset']+1"/><span> to </span><t t-esc="last_result_showing"/> )</span></t>
+                        <t t-if="results_count==0"><span>No se encontraron resultados</span></t>
+                        <t t-if="results_count==1"><t t-esc="results_count"/><span> resultado encontrado</span></t>
+                        <t t-if="results_count&gt;1"><t t-esc="results_count"/><span> resultados encontrados</span></t>
+                        <t t-if="results_count&gt;0"><span>, mostrando </span><span>( <t t-esc="pager['offset']+1"/><span> a </span><t t-esc="last_result_showing"/> )</span></t>
                     </div>
                 </div>
 

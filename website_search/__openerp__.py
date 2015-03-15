@@ -29,7 +29,6 @@ Search website content: including pages, blogs posts, blog post comments, custom
         """,
     'author': 'OpenSur SA',
     'website': 'https://www.opensur.com',
-    'images': ['static/description/results.png', 'static/description/advanced.png', 'static/description/options.png', 'static/description/search_field.png', 'static/description/search_icon.png'],
     'depends': [
         'website'
     ],
