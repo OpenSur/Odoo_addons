@@ -1,5 +1,8 @@
 openerp.web_graph_extended = function(instance) {
 
+    var _lt = instance.web._lt;
+    var _t = instance.web._t;
+
     var web_graph_extended = instance.web_graph // loading the namespace of the 'web_graph' module
 
     var _super_ = web_graph_extended.Graph.prototype.start;
