@@ -8,9 +8,9 @@ openerp.web_menu_hide = function (instance) {
         bind_events: function () {
             var self = this;
             this._super();
-            elem=$("<ul class='oe_menu_hide' style='height:auto; padding-left: 16px;'><li style='display: block;' ><a id='web_menu_hideshow' href='#' title='Show/Hide left menu' class='web_hide_show'/></li></ul>");
+            elem=$("<ul class='nav navbar-nav navbar-left'><li style='display: block;' ><a id='web_menu_hideshow' href='#' title='Show/Hide left menu' class='web_hide_show'/></li></ul>");
             root=self.$el.parents();
-            elem.prependTo(root.find('.oe_topbar'));
+            elem.prependTo(root.find('#oe_main_menu_placeholder'));
             self.$el.on('click', '#web_menu_hideshow', function () {
                 // Check if left menu visible
                 root=self.$el.parents();
