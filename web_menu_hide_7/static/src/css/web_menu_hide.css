@@ -15,7 +15,7 @@
 }
 .openerp .oe_menu_hide > li > a {
   display: block;
-  padding: 5px 10px 7px;
+  padding: 5px 2px 7px;
   line-height: 20px;
   height: 20px;
   text-decoration: none;
@@ -32,12 +32,13 @@
 .web_hide_show
 {
     background-image: url("/web_menu_hide_7/static/src/img/show_hide.png");
-    background-size: 17px 20px;
+    background-size: 17px 17px;
     width: 17px;
-    height: 22px;
+    height: 17px;
     display: inline-block;
     background-position: left center;
     background-repeat: no-repeat;
+    margin-left: 3px;
 }
 
 
