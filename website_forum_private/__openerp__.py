@@ -24,13 +24,13 @@
     'category': 'Website',
     'website': 'https://www.opensur.com',
     'summary': 'Forums private access',
-    'version': '1.01’,
+    'version': '1.01',
     'description': """
 OpenERP Forum Private
 =====================
 Add feature to have private forums, visible only for certain security groups
         """,
-    'author': 'OpenSur SA’,
+    'author': 'OpenSur SA',
     'depends': ['website_forum'],
     'data': [
         'data/access_rules.xml',
