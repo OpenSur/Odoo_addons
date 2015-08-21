@@ -24,13 +24,13 @@
     'category': 'Website',
     'website': 'https://www.opensur.com',
     'summary': 'Blogs private access',
-    'version': '1.01’,
+    'version': '1.01',
     'description': """
 OpenERP Blog Private
 ====================
 Add feature to have private blogs, visible only for certain security groups
         """,
-    'author': 'OpenSur SA’,
+    'author': 'OpenSur SA',
     'depends': ['website_blog'],
     'data': [
         'data/access_rules.xml',
