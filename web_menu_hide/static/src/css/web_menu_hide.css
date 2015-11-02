@@ -1,7 +1,7 @@
 
 .web_hide_show
 {
-    background-image: url("/web_menu_hide_8/static/src/img/show_hide_gray.png");
+    background-image: url("/web_menu_hide/static/src/img/show_hide_gray.png");
     background-size: 17px 17px;
     width: 17px;
     height: 17px;
@@ -13,6 +13,6 @@
 
 .web_hide_show:hover
 {
-    background-image: url("/web_menu_hide_8/static/src/img/show_hide.png");
+    background-image: url("/web_menu_hide/static/src/img/show_hide.png");
     background-size: 17px 17px;
 }
